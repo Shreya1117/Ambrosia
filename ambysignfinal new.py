@@ -17,7 +17,7 @@ def signupfinal():
     style2 = Style()
     style2.configure('W.TButton', font = ('Engravers MT', 20, 'bold'))
     def insertsignup():
-                conn_siu= mysql.connector.connect(host="localhost",user="root",password="st",database="Ambrosia")
+                conn_siu= mysql.connector.connect(host="localhost",user="root",password="your_password",database="Ambrosia")
                 siu_cur=conn_siu.cursor()
                 sql=("INSERT INTO USER_DEETS (USERNAME,NAME,EMAIL_ID,MOBILE_NO,ADDRESS,PASSWORD) VALUES (%s, %s, %s, %s, %s, %s);")
                 values=(e_1.get(),e_2.get()+e_3.get(),e_4.get(),e_5.get(), e_6.get(),e_7.get())
@@ -111,7 +111,7 @@ def signinfinal():
     style2 = Style()
     style2.configure('W.TButton', font = ('Engravers MT', 20, 'bold'))
     def checksignin():
-            conn_siu= mysql.connector.connect(host="localhost",user="root",password="anika007",database="AMBROSIA")
+            conn_siu= mysql.connector.connect(host="localhost",user="root",password="your_password",database="AMBROSIA")
             siu_cur=conn_siu.cursor()
             sql=("Select * from USER_DEETS where USERNAME = %s and PASSWORD = %s ;")
             values=(e_1n.get(),e_2n.get())
